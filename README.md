@@ -17,4 +17,4 @@ API.
 
 Os dados dos funcionários atuais serão fornecidos em um arquivo que pode ser
 no formato `.csv` ou `.json` e este mesmo arquivo poderá ser usado pera
-versões futuras. `Nome`, `Depto`, `Cargo`, `Email`.
+versões futuras. O funcionário deve ter: `Nome`, `Depto`, `Cargo`, `Email`.
