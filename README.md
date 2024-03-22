@@ -18,3 +18,19 @@ API.
 Os dados dos funcionários atuais serão fornecidos em um arquivo que pode ser
 no formato `.csv` ou `.json` e este mesmo arquivo poderá ser usado pera
 versões futuras. O funcionário deve ter: `Nome`, `Depto`, `Cargo`, `Email`.
+
+## Installation
+
+```py
+pip install seunome-dundie
+```
+
+```python
+pip install -e `.[dev]`
+```
+
+## Usage
+
+```py
+dundie load assets/people.csv
+```
