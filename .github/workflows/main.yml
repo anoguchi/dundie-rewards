@@ -26,7 +26,9 @@ jobs:
       - name: Install dependencies
         run: pip install '.[test]'
       - name: Create and start virtual environment
-        run: pip virtualenv
+        run: |
+          pip install --upgrade pip
+          make virtualenv
       - name: Run tests
         run: make testci
       - name: Publish Test Results
