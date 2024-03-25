@@ -31,8 +31,5 @@ jobs:
         uses: EnricoMi/publish-unit-test-result-action@v2
         if: always()
         with:
-          files: |
-            test-results/**/*.xml
-            test-results/**/*.trx
-            test-results/**/*.json
+          files: test-results.xml
           check_name: Test Tesult (Python ${{ matrix.python-version }})  
