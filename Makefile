@@ -2,7 +2,7 @@
 
 install:
 	@echo "Installing for dev environment"
-	@.venv/bin/python3 -m pip install -e '.[dev]'
+	@.venv/bin/python -m pip install -e '.[dev]'
 	
 virtualenv:
 	@echo "Creating virtual environment"
@@ -12,15 +12,15 @@ ipython:
 	@echo "Starting ipython"
 	@.venv/bin/ipython
 
-watch:
-	#@.venv/bin/ptw
-	@ls **/*.py | entr pytest
-
 test:
 	@.venv/bin/pytest -s
 
 testci:
 	@.venv/bin/pytest -v --junitxml=test-results.xml
+	
+watch:
+	#@.venv/bin/ptw
+	@ls **/*.py | entr pytest
 
 clean:					## Clean unused files.
 	@find ./ -name "*.pyc" -exec rm -f {} \;
