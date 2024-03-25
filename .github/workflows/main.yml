@@ -26,9 +26,8 @@ jobs:
       - name: Install dependencies
         run: |
           pip install --upgrade pip
-          echo "VIRTUAL ENV:" $VIRTUAL_ENV
+          pip install '.[test]'
           source .venv/bin/activate
-          make install
       - name: Run tests
         run: make testci
       - name: Publish Test Results
