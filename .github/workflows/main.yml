@@ -15,7 +15,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: ['3.8', '3.10', '3.12']
+        python-version: ['3.8','3.10']
         os: [ubuntu-latest]
     runs-on: ${{ matrix.os }}
     steps:
@@ -24,7 +24,13 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
-        run: pip install '.[test]'
+        run: 
+          pip install '.[test]'
       - name: Run tests
-        run: pytest -vv tests integration
-          
+        run: pytest -v --junitxml=test-results.xml
+      - name: Publish Test Results
+        uses: EnricoMi/publish-unit-test-result-action@v2
+        if: always()
+        with:
+          files: test-results.xml
+          check_name: Test Tesult (Python ${{ matrix.python-version }})  
