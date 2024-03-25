@@ -19,6 +19,9 @@ watch:
 test:
 	@.venv/bin/pytest -s
 
+testci:
+	@.venv/bin/pytest -v --junitxml=test-result.xml
+
 clean:					## Clean unused files.
 	@find ./ -name "*.pyc" -exec rm -f {} \;
 	@find ./ -name "__pycache__" -exec rm -f {} \;
