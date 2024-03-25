@@ -6,7 +6,7 @@ install:
 	
 virtualenv:
 	@echo "Creating virtual environment"
-	@python3 -m venv .venv
+	@.venv/bin/python -m pip -m venv .venv	
 
 ipython:
 	@echo "Starting ipython"
@@ -14,7 +14,7 @@ ipython:
 
 watch:
 	#@.venv/bin/ptw
-	@ls **/*.py | entr -c .venv/bin/pytest -s
+	@ls **/*.py | entr pytest
 
 test:
 	@.venv/bin/pytest -s
