@@ -28,8 +28,11 @@ jobs:
       - name: Run tests
         run: make testci
       - name: publish junit results
-        uses: EnricoMi/publish-unit-test-result-action@v2
+        uses: EnricoMi/publish-unit-test-result-action/linux@v2
         if: always()
         with:
-          files: test-result.xml
+          files: |
+            test-results/**/*.xml
+            test-results/**/*.trx
+            test-results/**/*.json
           check_name: Test Tesult (Python ${{ matrix.python-version }})  
