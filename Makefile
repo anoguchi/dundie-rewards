@@ -14,9 +14,6 @@ ipython:
 
 test:
 	@.venv/bin/pytest -s
-
-testci:
-	@.venv/bin/pytest -v --junitxml=test-results.xml
 	
 watch:
 	#@.venv/bin/ptw
