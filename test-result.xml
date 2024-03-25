@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="3" time="0.250" timestamp="2024-03-25T15:38:10.261378" hostname="archlinux"><testcase classname="tests.test_load" name="test_load_positive_has_2_people" time="0.003"><failure message="AssertionError: assert 3 == 2&#10; +  where 3 = len(['Jim Halpert, Sales, Salesman, jim@dundermifflin.com', 'Dwigth Schrute, Sales, Salesmanager, schrute@dundermiffin.com', 'Pam Beesly, Reception, Secretary, pambeesly@dundermiffin.com'])&#10; +    where ['Jim Halpert, Sales, Salesman, jim@dundermifflin.com', 'Dwigth Schrute, Sales, Salesmanager, schrute@dundermiffin.com', 'Pam Beesly, Reception, Secretary, pambeesly@dundermiffin.com'] = load('tests/assets/people.csv')">@pytest.mark.unit
+    @pytest.mark.high
+    def test_load_positive_has_2_people():
+        """Test function load function."""
+&gt;       assert len(load(PEOPLE_FILE)) == 2
+E       AssertionError: assert 3 == 2
+E        +  where 3 = len(['Jim Halpert, Sales, Salesman, jim@dundermifflin.com', 'Dwigth Schrute, Sales, Salesmanager, schrute@dundermiffin.com', 'Pam Beesly, Reception, Secretary, pambeesly@dundermiffin.com'])
+E        +    where ['Jim Halpert, Sales, Salesman, jim@dundermifflin.com', 'Dwigth Schrute, Sales, Salesmanager, schrute@dundermiffin.com', 'Pam Beesly, Reception, Secretary, pambeesly@dundermiffin.com'] = load('tests/assets/people.csv')
+
+tests/test_load.py:10: AssertionError</failure></testcase><testcase classname="tests.test_load" name="test_load_positive_first_name_starts_with_j" time="0.001" /><testcase classname="integration.test_load" name="test_load" time="0.132" /></testsuite></testsuites>
