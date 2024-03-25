@@ -1,5 +1,7 @@
 # Projeto Dundie Rewards
 
+[![CI](https://github.com/anoguchi/dundie-rewards/actions/workflows/main.yml/badge.svg)](https://github.com/anoguchi/dundie-rewards/actions/workflows/main.yml)
+
 O time foi contratado pela Dunder Mifflin, grande fabricante de papéis para
 desenvolver um sistema de recompensas para seus colaboradores.
 
